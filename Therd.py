@@ -10,6 +10,7 @@ for j in range(len(A)):
 
 fig = plt.figure()
 ax = plt.axes(xlim=(0, len(U)), ylim=(0, max(U)))
+ax.grid()
 line, = ax.plot([], [], lw=2)
 
 
