@@ -4,9 +4,7 @@ import matplotlib.animation as animation
 
 U = np.loadtxt("Third/data.txt")
 A = np.eye(len(U))
-
-for j in range(len(A)):
-    A[j][j - 1] = -1
+A[np.arange(U.shape[0]), np.arange(U.shape[0])-1] = -1
 
 fig = plt.figure()
 ax = plt.axes(xlim=(0, len(U)), ylim=(0, max(U)))
